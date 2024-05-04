@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-color: #fcfcfc;
+	height: 100%;
+}
+
+body {
+	font: 19px 'Lucida Grande', Helvetica, Arial, sans-serif;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	margin: 2% 20% 0 20%;
+}
+
+button,
+a {
+	background-color: rgb(13, 13, 129);
+	color: white;
+	border: 0;
+	border-radius: 4px;
+	padding: 10px 20px 10px 20px;
+	transition: 100ms ease-in-out;
+	cursor: pointer;
+}
+
+button:hover,
+a:hover {
+	background-color: rgb(20, 20, 170);
+}
+
+a {
+	text-decoration: none;
+}
+

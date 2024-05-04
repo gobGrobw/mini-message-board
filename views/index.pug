@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  style 
+    include ../public/stylesheets/index.css
+
+  header 
+    h1= title
+    a(href="/message/new").new-msg Post message
+    
+  main 
+    h2 Recent Messages
+    
+    if messages
+      ul 
+        for message in messages 
+          li
+            p.msg= message.message 
+            div 
+              p #[strong Posted by: #{message.username} ]
+              p Posted at: #{message.date_formatted} 

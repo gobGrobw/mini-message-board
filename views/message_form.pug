@@ -1,0 +1,23 @@
+extends layout 
+
+block content 
+	style 
+		include ../public/stylesheets/message_form.css
+
+	h1= title 
+
+	form(method="POST")
+		section 
+			label(for="username") Enter username 
+			input#username(type="text" name="username" placeholder="Username, eg. greatGob!" value=(undefined === message ? '' : message.username) required)
+
+		section 
+			label(for="message") Enter message 
+			input#message(type="text" name="message" placeholder="Message, eg, Hello, I am from Iceland!" value=(undefined === message ? '' : message.message) required)
+
+		button(type="Submit") Post message  
+
+	if errors 
+		ul 
+			for error in errors 
+				li= error.msg
